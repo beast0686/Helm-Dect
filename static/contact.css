@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-active {
+    background-color: #121212;
+    color: white;
+}
+
+header, footer {
+    background-color: #f8f9fa; /* Light cream background for header and footer in light mode */
+    color: black; /* Black text color for header and footer in light mode */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-active header, .dark-mode-active footer {
+    background-color: #343a40; /* Dark gray background for header and footer in dark mode */
+    color: white; /* White text color for header and footer in dark mode */
+}
+
+.navbar {
+    background-color: #8987ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 20px; /* Optional: Add some space below the logo */
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-left: 10px;
+    color: inherit;
+}
+
+.logo-img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.logo-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    padding: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light background color for form in light mode */
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white; /* White background color for inputs and textareas in both modes */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode-active .contact-form {
+    background-color: #121212;
+    color: white;
+    border-color: #444;
+}
+
+.dark-mode-active .contact-form input, .dark-mode-active .contact-form textarea {
+    background-color: darkgray; /* Adjusted background color for inputs and textareas in dark mode */
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode-active .contact-form button {
+    background-color: #0056b3;
+}
+
+.dark-mode-active .contact-form button:hover {
+    background-color: #003f7f;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #8987ff;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.dark-mode-active .footer {
+    background-color: #343a40; /* Dark gray background for footer in dark mode */
+    color: white; /* White text color for footer in dark mode */
+}
+
+/* Dark Mode Slider Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

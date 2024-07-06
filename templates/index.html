@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmet Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+        <ul class="nav-list">
+            <li>
+                <div class="dark-mode">
+                    <label class="switch">
+                        <input type="checkbox" onclick="darkMode()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <div class="logo">
+        <div class="logo-img">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        </div>
+        <h1>HELM DECT</h1>
+    </div>
+</header>
+<main>
+    <section class="description">
+        <p>HELM DECT developed a helmet detection system, based on deep learning techniques, that enables to see<br>
+            whether people wear their safety helmets at construction work areas or while driving through traffic.</p>
+    </section>
+    <section class="upload-image">
+        <h2>Upload Image</h2>
+        <p>Drag and drop an image here or browse to select a file.</p>
+        <input type="file" id="uploadInput" accept="image/*" hidden>
+        <label for="uploadInput" class="custom-file-upload">Choose File</label>
+        <br><br>
+        <div class="detect-helmet">
+            <button onclick="detectHelmet()">Detect Helmet</button>
+        </div>
+    </section>
+    <div class="additional-images">
+        <div class="image-wrapper top-left">
+            <img src="{{ url_for('static', filename='images/bike1.jpg') }}" alt="bike1" class="uploaded-image">
+        </div>
+        <div class="image-wrapper top-right">
+            <img src="{{ url_for('static', filename='images/bike2.png') }}" alt="bike2" class="uploaded-image">
+        </div>
+    </div>
+</main>
+<div class="about-section">
+    <h2 style="text-align:center">DEVELOPERS</h2>
+</div>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2>Aman</h2>
+                <p class="title">Full Stack Developer</p>
+                <p><a href="mailto:amansoudagar202@gmail.com">amansoudagar202@gmail.com</a></p>
+                <form action="{{ url_for('contact') }}">
+                    <input class="button" type="submit" value="Contact" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2>Chirag</h2>
+                <p class="title">Database Manager</p>
+                <p><a href="mailto:chiragprao2004@gmail.com">chiragprao2004@gmail.com</a></p>
+                <form action="{{ url_for('contact') }}">
+                    <input class="button" type="submit" value="Contact" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2>Haider</h2>
+                <p class="title">Contributor</p>
+                <p><a href="mailto:mesagar707@gmail.com">mesagar707@gmail.com</a></p>
+                <form action="{{ url_for('contact') }}">
+                    <input class="button" type="submit" value="Contact" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>&copy; 2024 HELM DECT</p>
+</footer>
+</body>
+</html>

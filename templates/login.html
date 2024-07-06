@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>HELM DECT Login</title>
+    <link rel="stylesheet"
+          href="../static/login.css">
+</head>
+
+<body>
+<header>
+    <h1 class="heading">HELM DECT</h1>
+</header>
+
+<!-- container div -->
+<div class="container">
+
+    <!-- upper button section to select the login or signup form -->
+    <div class="slider"></div>
+    <div class="btn">
+        <button class="login">Login</button>
+        <button class="signup">Signup</button>
+    </div>
+
+    <!-- Form section that contains the login and the signup form -->
+    <div class="form-section">
+
+        <!-- login form -->
+        <div class="login-box">
+            <form action="{{ url_for('login') }}" method="POST">
+                <input type="email" name="email" class="email ele" placeholder="Your email">
+                <input type="password" name="password" class="password ele" placeholder="Password">
+                <button type="submit" class="clkbtn">Login</button>
+            </form>
+        </div>
+
+        <!-- signup form -->
+        <div class="signup-box">
+            <form action="{{ url_for('signup') }}" method="POST">
+                <input type="text" name="name" class="name ele" placeholder="Your name">
+                <input type="email" name="email" class="email ele" placeholder="Your email">
+                <input type="password" name="password" class="password ele" placeholder="Password">
+                <input type="password" name="confirm_password" class="password ele" placeholder="Confirm password">
+                <button type="submit" class="clkbtn">Signup</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../static/login.js"></script>
+</body>
+</html>

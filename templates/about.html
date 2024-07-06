@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/about.css">
+    <title>About Our Helmet Detection System</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+            <ul class="nav-list">
+                <li>
+                    <div class="dark-mode">
+                        <label class="switch">
+                            <input type="checkbox" id="dark-mode-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <div class="logo">
+        <div class="logo-img">
+            <img src="../static/images/logo.png">
+        </div>
+        <h1>HELM DECT</h1>
+    </div>
+
+    <div class="container">
+        <h1>About Our Helmet Detection System</h1>
+        <p class="fade-in">Our Helmet Detection System utilizes deep learning models to detect and classify objects in images, specifically focusing on identifying persons and helmets. Here’s a breakdown of its key components and functionalities:</p>
+
+        <h2 class="fade-in">Image and Data Handling:</h2>
+        <ul class="fade-in">
+            <li>The system processes images from a specified directory, along with corresponding bounding box data for objects of interest.</li>
+        </ul>
+
+        <h2 class="fade-in">YOLO Object Detection:</h2>
+        <ul class="fade-in">
+            <li><strong>Person Detection:</strong> Utilizes a YOLO (You Only Look Once) network to detect persons in images. It employs a pre-trained model with weights and configuration files to identify persons with high accuracy.</li>
+            <li><strong>Helmet Detection:</strong> Similarly, a YOLO network is employed to detect helmets. This model is trained specifically for recognizing helmets using labeled data.</li>
+        </ul>
+
+        <h2 class="fade-in">Processing and Visualization:</h2>
+        <ul class="fade-in">
+            <li>The detected objects (persons and helmets) are marked with bounding boxes on the input images.</li>
+            <li>Each detection is accompanied by a confidence score, indicating the certainty of the object's presence.</li>
+        </ul>
+
+        <h2 class="fade-in">Output Display:</h2>
+        <ul class="fade-in">
+            <li>The processed images, with annotated detections, are displayed using matplotlib, showing where persons and helmets are identified.</li>
+        </ul>
+
+        <h2 class="fade-in">Technologies Used:</h2>
+        <ul class="fade-in">
+            <li>Python, OpenCV, and Matplotlib are the primary technologies used to develop and visualize the system.</li>
+            <li>YOLO (You Only Look Once) models are integrated for efficient and accurate object detection.</li>
+        </ul>
+
+        <h2 class="fade-in">Application Areas:</h2>
+        <ul class="fade-in">
+            <li>Our system finds applications in improving safety measures, particularly in contexts where the use of helmets is critical, such as in traffic monitoring and safety enforcement.</li>
+        </ul>
+
+        <p class="fade-in">This system not only enhances safety protocols but also demonstrates the potential of AI-driven solutions in real-world applications. For more details or inquiries, please contact us.</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 HELM DECT</p>
+    </footer>
+    <script src="../static/about.js"></script>
+</body>
+
+</html>
