@@ -23,7 +23,7 @@ This project is a web application built with Flask for detecting persons and hel
 1. Clone the repository:
 
    ```
-   git clone https://github.com/your-username/helmet-detection-system.git
+   git clone https://github.com/beast0686/helmet-detection-system.git
    cd helmet-detection-system
    ```
 
